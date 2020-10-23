@@ -1,5 +1,3 @@
-
-
 ::placeholder {
 	color: #CDCDCD;
 }
@@ -155,7 +153,7 @@
 	width: 800px;
 	text-align: center;
 	color: #B3B3B3;
-	font-size: 16px;
+	font-size: 16.5px;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
 
@@ -189,8 +187,8 @@
 .infriendsohan {
 	position: relative;
 	text-align: center;
-	top: 11.5px;
-	font-size: 16px;
+	top: 12px;
+	font-size: 16.5px;
 	font-weight: bold;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
