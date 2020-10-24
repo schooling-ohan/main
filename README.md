@@ -1,6 +1,6 @@
 # main
 
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=buefy)
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=maroongold)
 
 <div>
 <img src="https://www.apple.com/v/apple-events/home/e/images/september-2019/meta/og__fodnljjkwl6y.png?201912111726">
@@ -12,21 +12,5 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=schooling-ohan&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=schooling-ohan&repo=main&show_owner=true)](https://github.com/anuraghazra/github-readme-stats)
-
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true)
-
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=dark)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=radical)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=merko)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=gruvbox)
-
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=tokyonight)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=onedark)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=cobalt)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=synthwave)
-
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=highcontrast)
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=schooling-ohan&show_icons=true&theme=dracula)
-
 
 
