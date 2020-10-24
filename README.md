@@ -1,9 +1,5 @@
 # main
 
-Lorem ipsum dolor sit amet.
-
-[button url="http://www.google.com"]
-
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=schooling-ohan)](https://github.com/anuraghazra/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=schooling-ohan&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
