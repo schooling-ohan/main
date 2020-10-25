@@ -34,3 +34,12 @@ window.onclick = function (event) {
 var text = mm + "월 " + dd + "일 오늘의 한마디"
 document.getElementById("top-blue-bar-text").innerHTML = text;
 
+function close_window() {
+	  close();
+  }
+
+function q_close_window() {
+	if (confirm("오늘의 한마디를 끝내시겠습니까?\n본 창은 테스트 때만 표시됩니다.")) {
+	  close();
+	}
+  }

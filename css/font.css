@@ -9,3 +9,13 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'NanumSquare_acEXB';
+    src: url('../font/NanumSquare_acB.eot');
+    src: url('../font/NanumSquare_acB.eot?#iefix') format('embedded-opentype'),
+        url('../font/NanumSquare_acB.woff2') format('woff2'),
+        url('../font/NanumSquare_acB.woff') format('woff'),
+        url('../font/NanumSquare_acB.ttf') format('truetype'),
+        url('../font/NanumSquare_acB.svg#NanumSquare_acB') format('svg');
+}
