@@ -222,13 +222,13 @@
 .termsInner {
 	position: absolute;
 	display: none;
-	margin-top: 120px;
+	margin-top: 7%;
 	padding-top: 13px;
 	padding-left: 40px;
 	padding-right: 43px;
 	padding-bottom: 20px;
-	height: 850px;
-	width: 700px;
+	height: 70%;
+	width: 50%;
 	left: 50%;
 	transform: translate(-50%);
 	overflow: auto;
@@ -244,8 +244,8 @@
 .killterms {
 	color: black;
 	background-color: white;
-	left: 670px;
-	top: 25px;
+	left: 84%;
+	top: 16px;
 	position: absolute;
 	border-color: rgba(0, 0, 0, 0);
 	font-weight: 1200;

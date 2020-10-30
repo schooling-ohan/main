@@ -7,6 +7,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
       <script src="./js/head.js"></script>
+      <script src="./js/firebase.js"></script>
    </head>
    <body>
       <div class="top-blue-bar">
@@ -16,14 +17,14 @@
             <button class="exit" id="exit" onclick="q_close_window()">✕</button>
          </div>
       </div>
-      <div class="inputs">
+      <div class="inputs" id="inputs">
          <div style="display:inline-block">
             <input type="text" id="input" class="input" placeholder="오늘의 한마디를 들려주세요." maxlength="200">
-            <button class="enter" id="enter">작성</button>
+            <button class="enter" id="enter" onclick="uploadmine()">작성</button>
             <label class="counter" id="counter">N5N</label>
          </div>
       </div>
-      <div class="terms">
+      <div class="terms" id="terms">
          <a class="term">* 본 서비스를 이용하면 본 </a><a class="termlink" onclick="termsview()">이용약관</a><a class="term">에 대해 철회할 수 없는 동의를 한 것으로 간주됩니다.</a>
       </div>
       <div class="friends">
@@ -94,4 +95,3 @@
    <link rel="stylesheet" href="./css/main.css">
    <link rel="stylesheet" href="./css/font.css">
 </html>
-
