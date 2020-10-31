@@ -70,6 +70,7 @@ function uploadmine(){
 
 function afterloadthings(){
     inputAble();
+    myinputget();
 }
 
 // 입력창과 이용약관의 보여주기 여부를 결정함
@@ -97,3 +98,22 @@ function inputAble(){
 function playerEvent(){
 
 }
+
+function myinputget(){
+    console.log(valueArray);
+    ohanArray = [];
+    for (oh = 0; oh < valueArray.length; oh++){
+        ohanArray.push(valueArray[oh][1]);
+    }
+    console.log(ohanArray);
+
+    for (an = 0; an < valueArray.length; an++){
+        if (ipArray[an] == ipv4) {
+            myohan = ohanArray[an];
+            console.log(myohan);
+            break;
+        }
+    }
+    document.getElementById('myohantxt').innerHTML = myohan;
+}
+

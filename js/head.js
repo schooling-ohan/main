@@ -45,9 +45,6 @@ function getip(){
     $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
     ipv4 = data.split("\n");
     ipv4 = ipv4[2].replace("ip=", "");
-    for (i = 0; i < 4; i++) {
-      ipv4 = ipv4.replace(".", "_");
-    }
     console.log(ipv4);
 })
 }

@@ -167,6 +167,39 @@
 	cursor: pointer;
 }
 
+.myohan {
+	background-color: rgba(4, 238, 160, 0.425);
+	position: absolute;
+	left: 50%;
+	height: 80px;
+	transform: translate(-50%);
+	top: 70px;
+	width: 60%;
+	display: flex;
+	align-items: center;
+}
+
+.myohantxt {
+	font-size: 1.75vw;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	display: inline-block;
+	font-family: 'NanumSquare_acB', Arial, sans-serif;
+}
+
+.myheart {
+	position: absolute;
+	background-color: rgba(255, 0, 0, 0.301);
+	left: 50%;
+	height: 35px;
+	transform: translate(-50%);
+	top: 150px;
+	width: 60%;
+	display: flex;
+	align-items: center;
+}
+
 .upfriends {
 	position: relative;
 	top: 130px;
