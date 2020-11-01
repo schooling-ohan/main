@@ -168,23 +168,17 @@
 }
 
 .myohan {
-	background-color: rgba(4, 238, 160, 0.425);
-	position: absolute;
-	left: 50%;
-	height: 80px;
-	transform: translate(-50%);
-	top: 70px;
-	width: 60%;
-	display: flex;
-	align-items: center;
-}
-
-.myohantxt {
-	font-size: 1.75vw;
-	width: 100%;
-	height: auto;
+    background-color: rgba(4, 238, 160, 0.425);
+    position: absolute;
+    left: 50%;
+    height: 80px;
+    transform: translate(-50%);
+    top: 70px;
+    width: 60%;
 	text-align: center;
-	display: inline-block;
+	font-size: 16.5px;
+	justify-content: center;
+	align-items: center;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
 

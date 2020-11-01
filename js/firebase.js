@@ -86,10 +86,16 @@ function inputAble(){
 
     if (isexit == -1) {
         console.log("가능가능");
+        document.getElementById("inputs").style.display = "block";
+        document.getElementById("terms").style.display = "block";
+        document.getElementById("myohan").style.display = "none";
+        document.getElementById("myheart").style.display = "none";
     } else {
         console.log("불가불가")
         document.getElementById("inputs").style.display = "none";
         document.getElementById("terms").style.display = "none";
+        document.getElementById("myohan").style.display = "flex";
+        document.getElementById("myheart").style.display = "block";
     }
 }
 
@@ -114,6 +120,6 @@ function myinputget(){
             break;
         }
     }
-    document.getElementById('myohantxt').innerHTML = myohan;
+    document.getElementById('myohan').innerHTML = myohan;
 }
 
