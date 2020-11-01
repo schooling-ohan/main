@@ -74,7 +74,7 @@
 
 .inputs {
 	position: absolute;
-	top: 75px;
+	top: 70px;
 	left: 50%;
 	height: 43px;
 	width: 58%;
@@ -168,15 +168,15 @@
 }
 
 .myohan {
-    background-color: rgba(4, 238, 160, 0.425);
     position: absolute;
     left: 50%;
     height: 80px;
     transform: translate(-50%);
     top: 70px;
-    width: 60%;
+    width: 55%;
 	text-align: center;
 	font-size: 16.5px;
+	letter-spacing: 1px;
 	justify-content: center;
 	align-items: center;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
@@ -184,19 +184,67 @@
 
 .myheart {
 	position: absolute;
-	background-color: rgba(255, 0, 0, 0.301);
 	left: 50%;
 	height: 35px;
 	transform: translate(-50%);
 	top: 150px;
 	width: 60%;
 	display: flex;
+	justify-content: center;
 	align-items: center;
+}
+
+.innerHeartThings {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.myHeartText {
+	font-size: 16px;
+	display: inline-block;
+	font-family: 'NanumSquare_acB', Arial, sans-serif;
+}
+
+.mySmallHeart{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin: 0px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: #FF8174;
+}
+
+.mySmallHeart:before,
+.mySmallHeart:after{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	content: '';
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #FF8174;
+}
+
+.mySmallHeart:before{
+	bottom: 0px;
+	left: -5px;
+}
+
+.mySmallHeart:after{
+	top: -5px;
+	right: 0px;
 }
 
 .upfriends {
 	position: relative;
-	top: 130px;
+	top: 136px;
 	height: 1.44px;
 	background-color: black;
 	outline: 0px;
@@ -206,7 +254,7 @@
 .friendsohan {
 	position: relative;
 	text-align: center;
-	top: 122px;
+	top: 128px;
 	height: 44px;
 	background-color: #FCF368;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
@@ -457,37 +505,5 @@
 
 .yesterdayOk:hover {
 	cursor: pointer;
-}
-
-.heart {
-	background-color: #FF8174;
-	display: inline-block;
-	height: 30px;
-	margin: 10px;
-	margin-top: 15px;
-	position: relative;
-	top: 0;
-	transform: rotate(-45deg);
-	width: 30px;
-}
-
-.heart:before,
-.heart:after {
-	content: "";
-	background-color: #FF8174;
-	border-radius: 50%;
-	height: 30px;
-	position: absolute;
-	width: 30px;
-}
-
-.heart:before {
-	top: -15px;
-	left: 0;
-}
-
-.heart:after {
-	left: 15px;
-	top: 0;
 }
 

@@ -95,7 +95,7 @@ function inputAble(){
         document.getElementById("inputs").style.display = "none";
         document.getElementById("terms").style.display = "none";
         document.getElementById("myohan").style.display = "flex";
-        document.getElementById("myheart").style.display = "block";
+        document.getElementById("myheart").style.display = "flex";
     }
 }
 
