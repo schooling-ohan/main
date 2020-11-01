@@ -1,7 +1,5 @@
 getip();
 
-
-
 function getdate() {
 	var rightNow = new Date();
 	var res = rightNow.toISOString().slice(0,10).replace(/-/g,"");
