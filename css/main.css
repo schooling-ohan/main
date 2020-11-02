@@ -19,7 +19,7 @@
 .yesterday {
 	color: white;
 	position: absolute;
-	top: 16px;
+	top: 15px;
 	right: 95px;
 	padding-top: 8px;
 	padding-bottom: 25px;
@@ -52,8 +52,8 @@
 	font-weight: 800;
 	top: 8px;
 	right: 8px;
-	padding-top: 7px;
-	padding-bottom: 7px;
+	padding-top: 6.5px;
+	padding-bottom: 6.5px;
 	padding-left: 19px;
 	padding-right: 19px;
 	border-style: solid;
@@ -168,18 +168,19 @@
 }
 
 .myohan {
-    position: absolute;
+	position: absolute;
     left: 50%;
-    height: 80px;
+	height: 90px;
     transform: translate(-50%);
     top: 70px;
-    width: 55%;
+    width: 75%;
 	text-align: center;
-	font-size: 16.5px;
+	font-size: 18.5px;
 	letter-spacing: 1px;
 	justify-content: center;
+	font-weight: 600;
 	align-items: center;
-	font-family: 'NanumSquare_acB', Arial, sans-serif;
+	font-family: 'NanumSquare_acEXB', Arial, sans-serif;
 }
 
 .myheart {
@@ -192,6 +193,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 10px;
 }
 
 .innerHeartThings {
@@ -201,7 +203,7 @@
 }
 
 .myHeartText {
-	font-size: 16px;
+	font-size: 16.2px;
 	display: inline-block;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
@@ -342,19 +344,19 @@
 }
 
 .termsInner::-webkit-scrollbar {
-	width: 13px;
+	width: 15px;
 	border-radius: 13px;
 	background: rgb(255, 255, 255);
 }
 
 .termsInner::-moz-scrollbar {
-	width: 13px;
+	width: 15px;
 	border-radius: 13px;
 	background: rgb(255, 255, 255);
 }
 
 .termsInner::scrollbar {
-	width: 13px;
+	width: 15px;
 	border-radius: 13px;
 	background: rgb(255, 255, 255);
 }

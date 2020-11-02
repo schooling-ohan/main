@@ -10,11 +10,12 @@ var Config = {
 };
 firebase.initializeApp(Config);
 
-let keyArray = [];
-let valueArray = [];
+timer = setInterval(getTodayData, 200);
 
 function getTodayData() {
     reload();
+    keyArray = [];
+    valueArray = [];
 
     var siteListref = firebase.database().ref('ItemArray').child(fulldate);
     siteListref.on('value', function(snapshot) {
@@ -31,8 +32,8 @@ function getTodayData() {
 getTodayData();
 
 function reload(){
-	getdate();
-	gettime();
+	getdate(false);
+	gettime(false);
   }
 
 function uploadmine(){
@@ -46,7 +47,7 @@ function uploadmine(){
     
     // 1번 항목 준비 - 내용 가져옴
 	var input = document.getElementById("input").value;
-    console.log(input);
+    //console.log(input);
     // 1번 항목 : 사용자 입력 내용
     sendArray.push(input);
     
@@ -62,7 +63,7 @@ function uploadmine(){
     // 지금까지 항목을 모았던 sendArray를 전송
 	firebase.database().ref("ItemArray/"+fulldate).child(fulltime).set(sendArray);
 	
-	console.log("ItemArray/"+fulldate+"/"+fulltime+"/"+sendArray);
+	//console.log("ItemArray/"+fulldate+"/"+fulltime+"/"+sendArray);
 
 	document.getElementById("inputs").style.display = "none";
 	document.getElementById("terms").style.display = "none";
@@ -79,19 +80,19 @@ function inputAble(){
     for (ip = 0; ip < valueArray.length; ip++){
         ipArray.push(valueArray[ip][0]);
     }
-    console.log(ipArray);
+    //console.log(ipArray);
 
     var isexit = ipArray.indexOf(ipv4);
-    console.log(isexit);
+    //console.log(isexit);
 
     if (isexit == -1) {
-        console.log("가능가능");
+        //console.log("가능가능");
         document.getElementById("inputs").style.display = "block";
         document.getElementById("terms").style.display = "block";
         document.getElementById("myohan").style.display = "none";
         document.getElementById("myheart").style.display = "none";
     } else {
-        console.log("불가불가")
+        //console.log("불가불가")
         document.getElementById("inputs").style.display = "none";
         document.getElementById("terms").style.display = "none";
         document.getElementById("myohan").style.display = "flex";
@@ -106,20 +107,29 @@ function playerEvent(){
 }
 
 function myinputget(){
-    console.log(valueArray);
+    //console.log(valueArray);
     ohanArray = [];
+    heartArray = [];
     for (oh = 0; oh < valueArray.length; oh++){
         ohanArray.push(valueArray[oh][1]);
+        heartArray.push(valueArray[oh][2]);
     }
-    console.log(ohanArray);
+    //console.log(ohanArray);
 
     for (an = 0; an < valueArray.length; an++){
         if (ipArray[an] == ipv4) {
             myohan = ohanArray[an];
-            console.log(myohan);
+            myheart = heartArray[an];
+            //console.log(myohan);
+            //console.log(myheart);
+            if (!(document.getElementById("myHeartText").innerHTML.includes(myheart))){
+                document.getElementById("myHeartText").innerHTML = myheart + "&nbsp";
+            }
             break;
         }
     }
-    document.getElementById('myohan').innerHTML = myohan;
+    if (document.getElementById('myohan').innerHTML != myohan) {
+        document.getElementById('myohan').innerHTML = myohan;
+    } 
 }
 

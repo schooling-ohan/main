@@ -43,11 +43,11 @@ document.getElementById("top-blue-bar-text").innerHTML = text;
 topbluebartext();
 
 function close_window() {
-	  close();
+	  window.close();
   }
 
 function q_close_window() {
 	if (confirm("오늘의 한마디를 끝내시겠습니까?\n본 창은 테스트 때만 표시됩니다.")) {
-	  close();
+		window.close();
 	}
   }

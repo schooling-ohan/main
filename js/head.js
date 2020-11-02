@@ -1,16 +1,21 @@
 getip();
 
-function getdate() {
+function getdate(bool) {
 	var rightNow = new Date();
 	var res = rightNow.toISOString().slice(0,10).replace(/-/g,"");
 	var year = res.slice(0,4);
 	var month = res.slice(4,6);
 	var day = res.slice(6,8);
 	fulldate = year + "-" + month + "-" + day;
-	console.log(fulldate);
+
+	if (bool == true){
+		console.log(fulldate);
+	}
 }
 
-  function gettime() {
+getdate(true);
+
+function gettime(bool) {
 	var rightNow = new Date();
 	var Hour = rightNow.getHours();
 	var Hour = String(Hour).padStart(2, '0');
@@ -21,8 +26,13 @@ function getdate() {
 	var milisecond = rightNow.getMilliseconds();
 	var milisecond = String(milisecond).padStart(3, '0');
 	fulltime = Hour  + min  + second + "_" + milisecond;
-	console.log(fulltime);
-  }
+
+	if (bool == true){
+		console.log(fulltime);
+	}
+}
+
+gettime(true);
 
 setInterval(counter, 10);
 
