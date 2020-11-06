@@ -31,17 +31,6 @@ window.onclick = function (event) {
 	}
 }
 
-function topbluebartext(){
-var rightNow = new Date();
-var res = rightNow.toISOString().slice(0,10).replace(/-/g,"");
-var year = res.slice(0,4);
-var month = res.slice(4,6);
-var day = res.slice(6,8);
-var text = month + "월 " + day + "일 오늘의 한마디"
-document.getElementById("top-blue-bar-text").innerHTML = text;
-}
-topbluebartext();
-
 function close_window() {
 	  window.close();
   }

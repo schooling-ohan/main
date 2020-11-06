@@ -175,10 +175,10 @@
     top: 70px;
     width: 75%;
 	text-align: center;
-	font-size: 18.5px;
+	font-size: 19px;
 	letter-spacing: 1px;
 	justify-content: center;
-	font-weight: 600;
+	font-weight: 500;
 	align-items: center;
 	font-family: 'NanumSquare_acEXB', Arial, sans-serif;
 }
@@ -299,11 +299,12 @@
 .termsInner {
 	position: absolute;
 	display: none;
-	margin-top: 7%;
+	margin-top: 5%;
 	padding-top: 13px;
 	padding-left: 40px;
 	padding-right: 43px;
 	padding-bottom: 20px;
+	font-size: 17px;
 	height: 70%;
 	width: 50%;
 	left: 50%;
@@ -344,36 +345,36 @@
 }
 
 .termsInner::-webkit-scrollbar {
-	width: 15px;
+	width: 13px;
 	border-radius: 13px;
-	background: rgb(255, 255, 255);
 }
 
 .termsInner::-moz-scrollbar {
-	width: 15px;
+	width: 13px;
 	border-radius: 13px;
-	background: rgb(255, 255, 255);
 }
 
 .termsInner::scrollbar {
-	width: 15px;
+	width: 13px;
 	border-radius: 13px;
-	background: rgb(255, 255, 255);
 }
 
 .termsInner::-webkit-scrollbar-track {
 	background: rgb(255, 255, 255);
-	border-radius: 13px;
+	border-top-right-radius: 13px;
+	border-bottom-right-radius: 13px;
 }
 
 .termsInner::-moz-scrollbar-track {
 	background: rgb(255, 255, 255);
-	border-radius: 13px;
+	border-top-right-radius: 13px;
+	border-bottom-right-radius: 13px;
 }
 
 .termsInner::scrollbar-track {
 	background: rgb(255, 255, 255);
-	border-radius: 13px;
+	border-top-right-radius: 13px;
+	border-bottom-right-radius: 13px;
 }
 
 .termsInner::-webkit-scrollbar-thumb {
@@ -381,7 +382,7 @@
 	border-radius: 8px;
 }
 
-.termsInner::-mozit-scrollbar-thumb {
+.termsInner::-moz-scrollbar-thumb {
 	background: #888;
 	border-radius: 8px;
 }

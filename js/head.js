@@ -2,15 +2,20 @@ getip();
 
 function getdate(bool) {
 	var rightNow = new Date();
-	var res = rightNow.toISOString().slice(0,10).replace(/-/g,"");
-	var year = res.slice(0,4);
-	var month = res.slice(4,6);
-	var day = res.slice(6,8);
+	var year = rightNow.getFullYear();
+	var month = rightNow.getMonth() + 1;
+	var month = String(month).padStart(2, '0');
+	var day = rightNow.getDate();
+	var day = String(day).padStart(2, '0');
 	fulldate = year + "-" + month + "-" + day;
 
+	text = month + "월 " + day + "일 오늘의 한마디"
+
 	if (bool == true){
-		console.log(fulldate);
+		console.log("fulldate : " + fulldate);
 	}
+	
+	
 }
 
 getdate(true);
@@ -28,7 +33,7 @@ function gettime(bool) {
 	fulltime = Hour  + min  + second + "_" + milisecond;
 
 	if (bool == true){
-		console.log(fulltime);
+		console.log("fulltime : " + fulltime);
 	}
 }
 
@@ -51,9 +56,9 @@ function counter() {
 
 function getip(){
     $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-    ipv4 = data.split("\n");
-    ipv4 = ipv4[2].replace("ip=", "");
-    console.log(ipv4);
+    ip = data.split("\n");
+    ip = ip[2].replace("ip=", "");
+    console.log("ip : " + ip);
 })
 }
 

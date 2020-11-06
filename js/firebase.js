@@ -14,6 +14,10 @@ timer = setInterval(getTodayData, 200);
 
 function getTodayData() {
     reload();
+    if (document.getElementById("top-blue-bar-text").innerHTML != text) {
+        document.getElementById("top-blue-bar-text").innerHTML = text;
+    }
+    console.log(text);
     keyArray = [];
     valueArray = [];
 
@@ -37,36 +41,43 @@ function reload(){
   }
 
 function uploadmine(){
-	reload();
+    var input = document.getElementById("input").value;
+    document.getElementById("input").value = "";
+    console.log(input);
+    if ( ( input.trim() == "" ) || (input == null) ) {
+        alert("오늘의 한마디를 입력해주세요");
+    } else {
+        reload();
 
-    // 파이어베이스에 전송할 항목을 묶을 리스트 생성
-    var sendArray = [];
+        // 파이어베이스에 전송할 항목을 묶을 리스트 생성
+        var sendArray = [];
     
-    // 0번 항목 : 아이피
-    sendArray.push(ipv4);
+        // 0번 항목 : 아이피
+        sendArray.push(ip);
     
-    // 1번 항목 준비 - 내용 가져옴
-	var input = document.getElementById("input").value;
-    //console.log(input);
-    // 1번 항목 : 사용자 입력 내용
-    sendArray.push(input);
-    
-    // 2번 항목 : 하트 수 (기본 0으로 전송)
-	sendArray.push(0);
-    
-    // 3번 항목 준비 - 나의 클릭한 것들 리스트 생성
-	var Myclick = [];
-    Myclick.push("");
-    // 3번 항목 : 내가 클릭한 것들 (기본 빈리스트 전송)
-	sendArray.push(Myclick);
-    
-    // 지금까지 항목을 모았던 sendArray를 전송
-	firebase.database().ref("ItemArray/"+fulldate).child(fulltime).set(sendArray);
+        // 1번 항목 준비 - 내용 가져옴
 	
-	//console.log("ItemArray/"+fulldate+"/"+fulltime+"/"+sendArray);
+        //console.log(input);
+        // 1번 항목 : 사용자 입력 내용
+        sendArray.push(input);
+    
+        // 2번 항목 : 하트 수 (기본 0으로 전송)
+	    sendArray.push(0);
+    
+        // 3번 항목 준비 - 나의 클릭한 것들 리스트 생성
+	    var Myclick = [];
+        Myclick.push("");
+        // 3번 항목 : 내가 클릭한 것들 (기본 빈리스트 전송)
+	    sendArray.push(Myclick);
+    
+        // 지금까지 항목을 모았던 sendArray를 전송
+	    firebase.database().ref("ItemArray/"+fulldate).child(fulltime).set(sendArray);
+	
+	    //console.log("ItemArray/"+fulldate+"/"+fulltime+"/"+sendArray);
 
-	document.getElementById("inputs").style.display = "none";
-	document.getElementById("terms").style.display = "none";
+	    document.getElementById("inputs").style.display = "none";
+	    document.getElementById("terms").style.display = "none";
+    }
 }
 
 function afterloadthings(){
@@ -77,12 +88,12 @@ function afterloadthings(){
 // 입력창과 이용약관의 보여주기 여부를 결정함
 function inputAble(){
     ipArray = [];
-    for (ip = 0; ip < valueArray.length; ip++){
-        ipArray.push(valueArray[ip][0]);
+    for (ips = 0; ips < valueArray.length; ips++){
+        ipArray.push(valueArray[ips][0]);
     }
     //console.log(ipArray);
 
-    var isexit = ipArray.indexOf(ipv4);
+    var isexit = ipArray.indexOf(ip);
     //console.log(isexit);
 
     if (isexit == -1) {
@@ -98,6 +109,7 @@ function inputAble(){
         document.getElementById("myohan").style.display = "flex";
         document.getElementById("myheart").style.display = "flex";
     }
+        
 }
 
 // 입력창과 이용약관 or 내가 쓴 글의 보여주기 여부의 교차
@@ -117,7 +129,7 @@ function myinputget(){
     //console.log(ohanArray);
 
     for (an = 0; an < valueArray.length; an++){
-        if (ipArray[an] == ipv4) {
+        if (ipArray[an] == ip) {
             myohan = ohanArray[an];
             myheart = heartArray[an];
             //console.log(myohan);
