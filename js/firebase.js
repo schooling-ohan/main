@@ -17,7 +17,6 @@ function getTodayData() {
     if (document.getElementById("top-blue-bar-text").innerHTML != text) {
         document.getElementById("top-blue-bar-text").innerHTML = text;
     }
-    console.log(text);
     keyArray = [];
     valueArray = [];
 

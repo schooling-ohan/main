@@ -280,6 +280,28 @@
 	border: 0px;
 }
 
+.friendslist {
+	position: relative;
+	top: 130px;
+	overflow-x: hidden; /*horizontal*/
+    overflow-y: scroll; /*vertical*/
+	width: 100%;
+	height: 450px;
+
+	-ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.friendslist::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.endfriends{
+	position: absolute;
+	top: 700px;
+	width: 100%;
+}
+
 .termsback {
 	position: fixed;
 	left: 0px;
