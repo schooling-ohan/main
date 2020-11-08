@@ -173,6 +173,8 @@ body {
 
 .myohan {
 	position: absolute;
+	white-space: normal;
+	word-break: break-all;
     left: 50%;
 	height: 90px;
     transform: translate(-50%);
