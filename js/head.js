@@ -58,7 +58,8 @@ function getip(){
     $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
     ip = data.split("\n");
     ip = ip[2].replace("ip=", "");
-    console.log("ip : " + ip);
+	console.log("ip : " + ip);
+	getTodayData();
 })
 }
 
