@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 ::placeholder {
 	color: #CDCDCD;
 }
@@ -286,7 +290,7 @@
 	overflow-x: hidden; /*horizontal*/
     overflow-y: scroll; /*vertical*/
 	width: 100%;
-	height: 450px;
+	height: 316px;
 
 	-ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -297,9 +301,9 @@
 }
 
 .endfriends{
-	position: absolute;
-	top: 700px;
+	position: relative;
 	width: 100%;
+	top: 133px;
 }
 
 .termsback {

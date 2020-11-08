@@ -17,6 +17,14 @@
     box-sizing: border-box;
 }
 
+.onlyconstantine {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
 .lefthings {
     width: 50%;
     position: relative;
@@ -24,6 +32,14 @@
     border-right-color: rgba(223, 223, 223, 0.5);
     border-right-width: thin;
     display: table-cell;
+}
+
+.thing {
+    width: 50%;
+    position: relative;
+    border-right-style: solid;
+    border-right-color: rgba(223, 223, 223, 0.5);
+    border-right-width: thin;
 }
 
 .righthings {
@@ -76,8 +92,8 @@ hr.nick_report {
 	width: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 8px;
+	margin-right: 8px;
 	border: 1px solid lightgray;
 }
 
