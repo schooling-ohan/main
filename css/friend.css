@@ -160,8 +160,8 @@ hr.nick_report {
 
 .bigHeart {
 	position: relative;
-	width: 35px;
-	height: 35px;
+	width: 33px;
+	height: 33px;
 	display: inline-block;
 	margin: 0px;
 	-webkit-transform: rotate(45deg);

@@ -1,0 +1,56 @@
+<br><br><br><br><input type="text" id="fname" name="fname"></input>
+<button type="button">Click Me!</button>
+
+<div class="cover">
+<div class="bigheart"></div>
+</div>
+
+<style>
+
+    .cover {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+.bigHeart {
+    position: relative;
+    
+    background: 
+    linear-gradient(to bottom right, #9198e5 70%, #9198e5, #e66465, #e66465 20%);
+
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+	margin: 0px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.bigHeart:before,
+.bigHeart:after {
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	content: '';
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+    background: 
+    linear-gradient(to bottom right, #9198e5 70%, #9198e5, #e66465, #e66465 20%);
+}
+
+.bigHeart:before {
+	bottom: 0px;
+	left: -19px;
+}
+
+.bigHeart:after {
+	top: -19px;
+	right: 0px;
+}
+</style>
