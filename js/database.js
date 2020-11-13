@@ -158,35 +158,43 @@ function friendsload(){
             friendsvalueArray.push(trialSnapshot.val());
             siteListref.off();
         });
-        reversevalue = friendsvalueArray.reverse();
 
+        reversevalue = friendsvalueArray.reverse();
         constantine = [];
 
         if (friendskeyArray.length % 2 == 0) {
             for (j = 0; j < reversevalue.length; j++) {
                 if (j % 2 == 0){
                     k = j + 1
-                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"><label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[j][1] + '</label><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
-                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"> <label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"> <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_s"><div class="smallHeart"></div></div> <label class="text" id="text">' + reversevalue[j][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[j][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
+                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[k][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
                 }
             }
         } else if (friendskeyArray.length % 2 == 1) {
             for (j = 0; j < reversevalue.length - 1; j++) {
                 if (j % 2 == 0 && reversevalue.length > 1){
                     k = j + 1
-                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"><label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="_s' + reversevalue[j][0] + '"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[j][1] + '</label><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
-                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"> <label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"> <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_s"><div class="smallHeart"></div></div> <label class="text" id="text">' + reversevalue[j][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[j][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
+                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[k][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
                 }
             }
             last = reversevalue.length - 1;
-            constantine.push('<div class="onlyconstantine"><hr class="friendLong"><div class="thing"><div class="line1"><label class="nickname">' + reversevalue[last][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[last][1] + '</label><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_b"><div class="bigHeartText" id="' + reversevalue[last][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+            constantine.push('<div class="onlyconstantine"><hr class="friendLong"><div class="thing"><div class="line1"><label class="nickname">' + reversevalue[last][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[last][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[last][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_b"><div class="bigHeartText" id="' + reversevalue[last][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
         }
 
-        if (document.getElementById('friendslist').innerHTML.replace(/[0-9]/g, '') != constantine.join('').replace(/[0-9]/g, '')) {
+        var flist = document.getElementById('friendslist').innerHTML.replace(/[0-9]/g, '');
+        var flist = flist.replace(/display: none;/g, '');
+        var flist = flist.replace(/display: inline-block;/g, '');
+
+        var cs = constantine.join('').replace(/[0-9]/g, '');
+        var cs = cs.replace(/display: none;/g, '');
+        var cs = cs.replace(/display: inline-block;/g, '');
+
+        if (flist != cs) {
             document.getElementById('friendslist').innerHTML = constantine.join('');
         }
 
-        friendsheart();
+        setTimeout(friendsheart, 50);
     })
 }
 
@@ -204,19 +212,60 @@ function friendsheart(){
             heartvalueArray.push(trialSnapshot.val());
             siteListref.off();
         });
-        for (h = 0; h < heartkeyArray.length; h++){
+
+        for (h = 0; h < heartvalueArray.length; h++){
             console.log(heartvalueArray[h][0] + '_t');
-
-            var name = heartvalueArray[h][0] + '_t'
-            document.getElementById(name).innerHTML = heartvalueArray[h][2];
-
-            
+            if (document.getElementById(heartvalueArray[h][0] + '_t').innerHTML != String(heartvalueArray[h][2])){
+                document.getElementById(heartvalueArray[h][0] + '_t').innerHTML = String(heartvalueArray[h][2]);
+            }
         }
+
+        findbiggest();
     })
-
-
 }
 
+function findbiggest(){
+    reload();
+    biggestkeyArray = [];
+    biggestvalueArray = [];
+    biggestImsi = [];
+    biggest = [];
+
+    var siteListref = firebase.database().ref('ItemArray').child(fulldate);
+    siteListref.on('value', function(snapshot) {
+        snapshot.forEach(function(trialSnapshot) {
+            biggestkeyArray.push(trialSnapshot.key);
+            biggestvalueArray.push(trialSnapshot.val());
+            siteListref.off();
+        });
+        for (b = 0; b < biggestvalueArray.length; b++){
+            biggestImsi.push(biggestvalueArray[b][2]);
+        }
+        max = Math.max.apply(null, biggestImsi);
+
+        for (bi = 0; bi < biggestvalueArray.length; bi++){
+            if (biggestvalueArray[bi][2] == max){
+                biggest.push(biggestvalueArray[bi][0]);
+            }
+        }
+
+        for (bye = 0; bye < biggestvalueArray.length; bye++){
+            if (!(biggest.includes(biggestvalueArray[bye][0] + '_c'))){
+                document.getElementById(biggestvalueArray[bye][0] + '_c').style.display = "none";
+            }
+        }
+
+        for (big = 0; big < biggest.length; big++){
+            if (document.getElementById(biggest[big] + "_c").style.display != "inline-block"){
+                document.getElementById(biggest[big] + "_c").style.display = "inline-block";
+            }
+        }
+        
+        friendsload();
+    })
+}
+
+friendsheart();
 
 
 function bigHeart(id){

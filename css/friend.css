@@ -140,14 +140,26 @@ hr.nick_report {
 	right: 0px;
 }
 
+.crown {
+	position: absolute;
+	margin-left: 43px;
+	margin-top: -15px;
+	background-image: url('../assets/BestCrown.png');
+	background-repeat: no-repeat;
+    background-size: 100%;
+	width: 27px;
+	height: 20px;
+	z-index: 2;
+}
+
 .bigHeartText {
-	
 	position: absolute;
 	width: 35px;
 	text-align: center;
 	color: white;
 	z-index: 1;
 	font-size: 17px;
+	margin-left: -1px;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
 
