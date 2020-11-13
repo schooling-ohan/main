@@ -146,6 +146,8 @@ function myinputget(){
     } 
 }
 
+document.onload = setTimeout(friendsload, 5);
+
 function friendsload(){
     reload();
     friendskeyArray = [];
@@ -194,11 +196,10 @@ function friendsload(){
             document.getElementById('friendslist').innerHTML = constantine.join('');
         }
 
-        setTimeout(friendsheart, 50);
+        setTimeout(friendsheart, 5);
     })
 }
 
-friendsload();
 
 function friendsheart(){
     reload();
@@ -214,13 +215,12 @@ function friendsheart(){
         });
 
         for (h = 0; h < heartvalueArray.length; h++){
-            console.log(heartvalueArray[h][0] + '_t');
             if (document.getElementById(heartvalueArray[h][0] + '_t').innerHTML != String(heartvalueArray[h][2])){
                 document.getElementById(heartvalueArray[h][0] + '_t').innerHTML = String(heartvalueArray[h][2]);
             }
         }
 
-        findbiggest();
+        setTimeout(findbiggest, 5);
     })
 }
 
@@ -261,11 +261,10 @@ function findbiggest(){
             }
         }
         
-        friendsload();
+        setTimeout(friendsload, 5);
+        console.log("궁금");
     })
 }
-
-friendsheart();
 
 
 function bigHeart(id){
