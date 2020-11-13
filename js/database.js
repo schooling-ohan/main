@@ -77,7 +77,8 @@ function uploadmine(){
 	    document.getElementById("inputs").style.display = "none";
         document.getElementById("terms").style.display = "none";
 
-        friendsload();
+        location.reload();
+
     }
 }
 
@@ -146,7 +147,11 @@ function myinputget(){
     } 
 }
 
-document.onload = setTimeout(friendsload, 5);
+function cookie(){
+    console.log(document.cookie);
+}
+
+document.onload = setTimeout(friendsload, 1000);
 
 function friendsload(){
     reload();
@@ -160,6 +165,13 @@ function friendsload(){
             friendsvalueArray.push(trialSnapshot.val());
             siteListref.off();
         });
+
+        if (friendsvalueArray.length == 1) {
+            if (document.cookie.includes("true") == true && document.cookie.includes(fulldate) == true){
+                document.cookie = "true" + fulldate;
+                location.reload();
+            }  
+        }
 
         reversevalue = friendsvalueArray.reverse();
         constantine = [];
@@ -196,7 +208,7 @@ function friendsload(){
             document.getElementById('friendslist').innerHTML = constantine.join('');
         }
 
-        setTimeout(friendsheart, 5);
+        setTimeout(friendsheart, 1000);
     })
 }
 
@@ -220,7 +232,7 @@ function friendsheart(){
             }
         }
 
-        setTimeout(findbiggest, 5);
+        setTimeout(findbiggest, 1000);
     })
 }
 
@@ -261,8 +273,7 @@ function findbiggest(){
             }
         }
         
-        setTimeout(friendsload, 5);
-        console.log("궁금");
+        setTimeout(friendsload, 1000);
     })
 }
 
