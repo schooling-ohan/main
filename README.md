@@ -3,4 +3,5 @@
 ## Informations
 | Title | Contents |
 | :--: | -- |
-| Link | https://schooling-ohan.github.io/main/ |
+| Site Link | https://schooling-ohan.github.io/main/ |
+| IE Error Link | https://schooling-ohan.github.io/main/error.html/ |
