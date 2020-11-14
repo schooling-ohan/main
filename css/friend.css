@@ -155,11 +155,11 @@ hr.nick_report {
 .bigHeartText {
 	position: absolute;
 	width: 35px;
-	text-align: center;
 	color: white;
+	text-align: center;
+	margin-left: -2px;
 	z-index: 1;
 	font-size: 17px;
-	margin-left: -1px;
 	font-family: 'NanumSquare_acB', Arial, sans-serif;
 }
 
