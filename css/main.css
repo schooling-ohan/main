@@ -460,7 +460,7 @@ body {
 	margin-left: -250px;
 	background-color: white;
 	width: 500px;
-	height: 400px;
+	height: 420px;
 	border-radius: 8px;
 }
 
@@ -486,7 +486,7 @@ body {
 
 .upper {
 	position: absolute;
-	top: 86px;
+	top: 82px;
 	left: 50%;
 	margin-left: -215px;
 	border-color: black;
@@ -499,13 +499,30 @@ body {
 }
 
 .yesterdayList {
-	position: absolute;
-	background-color: black;
+	position: relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	top: 90px;
+	left: 50%;
+	margin-top: 5px;
+	transform: translate(-50%);
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	width: 430px;
+	border-bottom: black 1px solid;
+	min-height: 80px;
+	max-height: 200px;
+	height: auto;
+	padding-bottom: 10px;
+}
+
+.yesterdayList::-webkit-scrollbar {
+    display: none;
 }
 
 .downer {
 	position: absolute;
-	top: 250px;
+	top: auto;
 	left: 50%;
 	margin-left: -215px;
 	border-color: black;
@@ -525,7 +542,7 @@ body {
 	position: absolute;
 	background-color: #375EE7;
 	border-radius: 27px;
-	top: 325px;
+	top: 345px;
 	left: 360px;
 	outline: 0px;
 	vertical-align: middle;

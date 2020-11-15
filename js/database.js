@@ -117,10 +117,6 @@ if (document.getElementById('myohan').innerHTML != myohan) {
 
 }
 
-function cookie(){
-    console.log(document.cookie);
-}
-
 document.onload = setTimeout(friendsload, 500);
 
 function friendsload(){
@@ -177,8 +173,13 @@ function friendsload(){
         }
 
         for (h = 0; h < friendsvalueArray.length; h++){
-            if (document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML != String(friendsvalueArray[h][2])){
-                document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML = String(friendsvalueArray[h][2]);
+            try {
+                if (document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML != String(friendsvalueArray[h][2])){
+                    document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML = String(friendsvalueArray[h][2]);
+                }
+            }
+            catch(err) {
+                fload();
             }
         }
 
@@ -212,6 +213,12 @@ function friendsload(){
     })
 }
 
+function fload(){
+    setTimeout(friendsload, 200);
+}
+
+document.onload = setTimeout(getyes(true), 500);
+
 function getyes(bool) {
 	var imyesdate = new Date();
 		imyesdate.setDate(imyesdate.getDate() - 1);
@@ -230,8 +237,6 @@ function getyes(bool) {
     yesterdaybest();
 }
 
-getyes(true);
-
 function yesterdaybest(){
     yeskeyArray = [];
     yesvalueArray = [];
@@ -243,7 +248,6 @@ function yesterdaybest(){
             yesvalueArray.push(trialSnapshot.val());
             siteListref.off();
         });
-        console.log(yesvalueArray);
 
         yesbiggestImsi = [];
         yesbiggest = [];
@@ -259,16 +263,14 @@ function yesterdaybest(){
             }
         }
 
-        console.log(yesbiggest);
+        yesbsetlist = [];
 
         for (y = 0; y < yesbiggest.length; y++){
-            console.log(yesbiggest[y][0] + "\n" + yesbiggest[y][1] + "\n" + yesbiggest[y][2] + "\n\n");
+            yesbsetlist.push('<div class="yestantine"><div class="lineA"><div class="yescrown"></div><label class="yesnickname">' + yesbiggest[y][0] + '</label><div class="yeshearts"><div class="yeshearttext">' + yesbiggest[y][2] + '</div><div class="yessmallHeartCover"><div class="yessmallHeart"></div></div></div></div><div class="lineB"><label class="yestext">' + yesbiggest[y][1] + '</label></div><hr class="yeslong"></div>');
         }
-    }) 
-}
 
-function fload(){
-    setTimeout(friendsload, 200);
+        document.getElementById('yesterdayList').innerHTML = yesbsetlist.join('');
+    }) 
 }
 
     function bigHeart(id){
