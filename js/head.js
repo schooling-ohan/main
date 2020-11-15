@@ -14,8 +14,6 @@ function getdate(bool) {
 	if (bool == true){
 		console.log("fulldate : " + fulldate);
 	}
-	
-	
 }
 
 getdate(true);
