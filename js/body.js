@@ -1,3 +1,9 @@
+function getterms(){
+    $.get('./terms.html', function(data) {
+	console.log(data);
+})
+}
+
 var modalBack = document.getElementById("termsback");
 var modalText = document.getElementById("termsInner");
 

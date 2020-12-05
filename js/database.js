@@ -135,6 +135,7 @@ function friendsload(){
     if (friendsvalueArray.length > 1 && friendsvalueArray[0].join('') == friendsvalueArray[1].join('')){
         console.log('중복입니다');
         location.reload();
+        return;
     }
 
         reversevalue = friendsvalueArray.reverse();
@@ -144,20 +145,136 @@ function friendsload(){
             for (j = 0; j < reversevalue.length; j++) {
                 if (j % 2 == 0){
                     k = j + 1
-                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"> <label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"> <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_s"><div class="smallHeart"></div></div> <label class="text" id="text">' + reversevalue[j][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[j][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
-                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[k][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+                    constantine.push(`
+                    <div class="constantine">
+                    <hr class="friendLong">
+                    <div class="lefthings">
+                       <div class="line1">
+                          <label class="nickname">` + reversevalue[j][0] + `</label>
+                          <hr class="nick_report">
+                          <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_r">신고</a>
+                       </div>
+                       <div class="line2">
+                          <div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_s">
+                             <div class="smallHeart"></div>
+                          </div>
+                          <label class="text" id="text">` + reversevalue[j][1] + `</label>
+                          <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[j][0] + `_c"></div>
+                          <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_b">
+                             <div class="bigHeartText" id="` + reversevalue[j][0] + `_t"></div>
+                             <div class="bigHeartBefore" id="` + reversevalue[j][0] + `_bb"></div>
+                             <div class="bigHeartMain" id="` + reversevalue[j][0] + `_bm"></div>
+                             <div class="bigHeartAfter" id="` + reversevalue[j][0] + `_ba"></div>
+                          </div>
+                       </div>
+                    </div>
+                    `);
+
+                    constantine.push(`
+                    <div class="righthings">
+                       <div class="line1">
+                          <label class="nickname">` + reversevalue[k][0] + `</label>
+                          <hr class="nick_report">
+                          <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_r">신고</a>
+                       </div>
+                       <div class="line2">
+                          <div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_s">
+                             <div class="smallHeart"></div>
+                          </div>
+                          <label class="text" id="text">` + reversevalue[k][1] + `</label>
+                          <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[k][0] + `_c"></div>
+                          <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_b">
+                             <div class="bigHeartText" id="` + reversevalue[k][0] + `_t"></div>
+                             <div class="bigHeartBefore" id="` + reversevalue[k][0] + `_bb"></div>
+                             <div class="bigHeartMain" id="` + reversevalue[k][0] + `_bm"></div>
+                             <div class="bigHeartAfter" id="` + reversevalue[k][0] + `_ba"></div>
+                          </div>
+                       </div>
+                    </div>
+                    </div>
+                    `);
                 }
             }
         } else if (friendskeyArray.length % 2 == 1) {
             for (j = 0; j < reversevalue.length - 1; j++) {
                 if (j % 2 == 0 && reversevalue.length > 1){
                     k = j + 1
-                    constantine.push('<div class="constantine"><hr class="friendLong"><div class="lefthings"><div class="line1"> <label class="nickname">' + reversevalue[j][0] + '</label><hr class="nick_report"> <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_s"><div class="smallHeart"></div></div> <label class="text" id="text">' + reversevalue[j][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[j][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[j][0] + '_b"><div class="bigHeartText" id="' + reversevalue[j][0] + '_t"></div><div class="bigHeart"></div></div></div></div>');
-                    constantine.push('<div class="righthings"><div class="line1"><label class="nickname">' + reversevalue[k][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[k][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[k][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[k][0] + '_b"><div class="bigHeartText" id="' + reversevalue[k][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+                    constantine.push(`
+                    <div class="constantine">
+                    <hr class="friendLong">
+                    <div class="lefthings">
+                       <div class="line1">
+                          <label class="nickname">` + reversevalue[j][0] + `</label>
+                          <hr class="nick_report">
+                          <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_r">신고</a>
+                       </div>
+                       <div class="line2">
+                          <div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_s">
+                             <div class="smallHeart"></div>
+                          </div>
+                          <label class="text" id="text">` + reversevalue[j][1] + `</label>
+                          <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[j][0] + `_c"></div>
+                          <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_b">
+                             <div class="bigHeartText" id="` + reversevalue[j][0] + `_t"></div>
+                             <div class="bigHeartBefore" id="` + reversevalue[j][0] + `_bb"></div>
+                             <div class="bigHeartMain" id="` + reversevalue[j][0] + `_bm"></div>
+                             <div class="bigHeartAfter" id="` + reversevalue[j][0] + `_ba"></div>
+                          </div>
+                       </div>
+                    </div>
+                    `);
+
+                    constantine.push(`
+                    <div class="righthings">
+                       <div class="line1">
+                          <label class="nickname">` + reversevalue[k][0] + `</label>
+                          <hr class="nick_report">
+                          <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_r">신고</a>
+                       </div>
+                       <div class="line2">
+                          <div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_s">
+                             <div class="smallHeart"></div>
+                          </div>
+                          <label class="text" id="text">` + reversevalue[k][1] + `</label>
+                          <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[k][0] + `_c"></div>
+                          <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_b">
+                             <div class="bigHeartText" id="` + reversevalue[k][0] + `_t"></div>
+                             <div class="bigHeartBefore" id="` + reversevalue[k][0] + `_bb"></div>
+                             <div class="bigHeartMain" id="` + reversevalue[k][0] + `_bm"></div>
+                             <div class="bigHeartAfter" id="` + reversevalue[k][0] + `_ba"></div>
+                          </div>
+                       </div>
+                    </div>
+                    </div>
+                    `);
                 }
             }
             last = reversevalue.length - 1;
-            constantine.push('<div class="onlyconstantine"><hr class="friendLong"><div class="thing"><div class="line1"><label class="nickname">' + reversevalue[last][0] + '</label><hr class="nick_report"><a class="report" onclick="report(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_r">신고</a></div><div class="line2"><div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_s"><div class="smallHeart"></div></div><label class="text" id="text">' + reversevalue[last][1] + '</label><div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="' + reversevalue[last][0] + '_c"></div><div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="' + reversevalue[last][0] + '_b"><div class="bigHeartText" id="' + reversevalue[last][0] + '_t"></div><div class="bigHeart"></div></div></div></div></div>');
+            constantine.push(`
+            <div class="onlyconstantine">
+               <hr class="friendLong">
+               <div class="thing">
+                  <div class="line1">
+                     <label class="nickname">` + reversevalue[last][0] + `</label>
+                     <hr class="nick_report">
+                     <a class="report" onclick="report(this.id);" style="cursor: pointer;" id="` + reversevalue[last][0] + `_r">신고</a>
+                  </div>
+                  <div class="line2">
+                     <div class="smallHeartCover" onclick="smallHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[last][0] + `_s">
+                        <div class="smallHeart"></div>
+                     </div>
+                     <label class="text" id="text">` + reversevalue[last][1] + `</label>
+                     <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[last][0] + `_c"></div>
+                     <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[last][0] + `_b">
+                        <div class="bigHeartText" id="` + reversevalue[last][0] + `_t"></div>
+                        <div class="bigHeartBefore" id="` + reversevalue[last][0] + `_bb"></div>
+                        <div class="bigHeartMain" id="` + reversevalue[last][0] + `_bm"></div>
+                        <div class="bigHeartAfter" id="` + reversevalue[last][0] + `_ba"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            `);
         }
 
         var flist = document.getElementById('friendslist').innerHTML.replace(/[0-9]/g, '');
@@ -266,7 +383,22 @@ function yesterdaybest(){
         yesbsetlist = [];
 
         for (y = 0; y < yesbiggest.length; y++){
-            yesbsetlist.push('<div class="yestantine"><div class="lineA"><div class="yescrown"></div><label class="yesnickname">' + yesbiggest[y][0] + '</label><div class="yeshearts"><div class="yeshearttext">' + yesbiggest[y][2] + '</div><div class="yessmallHeartCover"><div class="yessmallHeart"></div></div></div></div><div class="lineB"><label class="yestext">' + yesbiggest[y][1] + '</label></div><hr class="yeslong"></div>');
+            yesbsetlist.push(`
+            <div class="yestantine">
+               <div class="lineA">
+                  <div class="yescrown"></div>
+                  <label class="yesnickname">` + yesbiggest[y][0] + `</label>
+                  <div class="yeshearts">
+                     <div class="yeshearttext">` + yesbiggest[y][2] + `</div>
+                     <div class="yessmallHeartCover">
+                        <div class="yessmallHeart"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="lineB"><label class="yestext">` + yesbiggest[y][1] + `</label></div>
+               <hr class="yeslong">
+            </div>
+            `);
         }
 
         document.getElementById('yesterdayList').innerHTML = yesbsetlist.join('');

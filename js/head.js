@@ -7,7 +7,7 @@ function getdate(bool) {
 	var month = String(month).padStart(2, '0');
 	var day = rightNow.getDate();
 	var day = String(day).padStart(2, '0');
-	fulldate = year + "-" + month + "-" + day;
+	fulldate = year + "/" + month + "/" + day;
 
 	text = month + "월 " + day + "일 오늘의 한마디"
 
@@ -28,7 +28,7 @@ function gettime(bool) {
 	var second = String(second).padStart(2, '0');
 	var milisecond = rightNow.getMilliseconds();
 	var milisecond = String(milisecond).padStart(3, '0');
-	fulltime = Hour  + min  + second + "_" + milisecond;
+	fulltime = Hour + min  + second + "_" + milisecond;
 
 	if (bool == true){
 		console.log("fulltime : " + fulltime);

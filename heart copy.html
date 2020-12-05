@@ -66,7 +66,7 @@
 		value = document.getElementById("fname").value;
 		console.log(value);
 
-		nemo = 0.0575 * value * 2;
+		nemo = 0.057 * value * 2;
 		unnemo = 100 - parseFloat(nemo);
 
 		doge = (0.0575 * value * 2) - 40;
@@ -79,30 +79,9 @@
 			document.getElementById("bigHeartMain").style.background = 'linear-gradient(to bottom right, #9198e5 ' + unnemo + '%, #9198e5 0%, #e66465 0%, #e66465 ' + nemo + '%)';
 			document.getElementById("bigHeartBefore").style.background = '#CCCCCC';
 			document.getElementById("bigHeartAfter").style.background = '#CCCCCC';
-		} else if (value <= 371) {
-			doge = (0.0575 * value * 2) - 39.75;
-			undoge = 100 - parseFloat(doge);
-			doit();
-		} else if (value <= 381) {
-			doge = (0.0575 * value * 2) - 39.5;
-			undoge = 100 - parseFloat(doge);
-			doit();
-		} else if (value <= 391) {
-			doge = (0.0575 * value * 2) - 38.7;
-			undoge = 100 - parseFloat(doge);
-			doit();
-		} else if (value <= 401) {
-			doge = (0.0575 * value * 2) - 38;
-			undoge = 100 - parseFloat(doge);
-			doit();
-		} else if (value <= 411) {
-			doge = (0.0575 * value * 2) - 37.7;
-			undoge = 100 - parseFloat(doge);
-			doit();
 		} else {
-			doge = (0.0575 * value * 2) - 37.5;
-			undoge = 100 - parseFloat(doge);
-			doit();
+			document.getElementById("bigHeartMain").style.background = 'linear-gradient(to bottom right, #9198e5 ' + unnemo + '%, #9198e5 0%, #e66465 0%, #e66465 ' + nemo + '%)';
+
 		}
 	}
 

@@ -170,7 +170,7 @@ hr.nick_report {
 	margin-top: 10px;
 }
 
-.bigHeart {
+.bigHeartMain {
 	position: relative;
 	width: 33px;
 	height: 33px;
@@ -184,9 +184,10 @@ hr.nick_report {
 	background-color: #CCCCCC;
 }
 
-.bigHeart:before,
-.bigHeart:after {
+.bigHeartBefore,
+.bigHeartAfter {
 	position: absolute;
+	display: inline-block;
 	width: 34px;
 	height: 34px;
 	content: '';
@@ -195,16 +196,17 @@ hr.nick_report {
 	-o-border-radius: 50%;
 	border-radius: 50%;
 	background-color: #CCCCCC;
+	z-index: 1;
 }
 
-.bigHeart:before {
-	bottom: 0px;
-	left: -19px;
+.bigHeartBefore {
+	right: 11px;
+	top: -13px;
 }
 
-.bigHeart:after {
-	top: -19px;
-	right: 0px;
+.bigHeartAfter {
+	left: 11px;
+	top: -13px;
 }
 
 .yestantine{
