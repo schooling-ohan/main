@@ -296,8 +296,8 @@ function friendsload(){
 
         if (flist != cs) {
             document.getElementById('friendslist').innerHTML = constantine.join('');
-            console.log(flist)
-            console.log(cs)
+            //console.log(flist)
+            //console.log(cs)
         }
 
         var heartcountArray = [];
