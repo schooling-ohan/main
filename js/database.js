@@ -1,3 +1,5 @@
+//const { domainToUnicode } = require("url");
+
 var Config = {
     apiKey: "AIzaSyCyQGYZJSfjI07yhxkybLOg7syB575Rco4",
     authDomain: "schooling-ohan.firebaseapp.com",
@@ -52,7 +54,11 @@ function uploadmine(){
     } else {
         reload();
         var sendArray = [];
-        sendArray.push(ip);
+        if (ip == '112.151.179.200'){
+            sendArray.push('관리자')
+        } else{
+            sendArray.push(ip);
+        }
         sendArray.push(input);
         sendArray.push(0);
 
@@ -162,9 +168,9 @@ function friendsload(){
                           <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[j][0] + `_c"></div>
                           <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_b">
                              <div class="bigHeartText" id="` + reversevalue[j][0] + `_t"></div>
-                             <div class="bigHeartBefore" id="` + reversevalue[j][0] + `_bb"></div>
-                             <div class="bigHeartMain" id="` + reversevalue[j][0] + `_bm"></div>
-                             <div class="bigHeartAfter" id="` + reversevalue[j][0] + `_ba"></div>
+                             <svg class="heartSVG" data-name="heartSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="` + reversevalue[j][0] + `_g">
+                             <path d="M339.38,233c49.85-1.33,93.69,15.82,130.28,47,25.5,21.75,42.17,18.39,67.87-.56C647,198.67,784.74,226.82,843.29,339.34,881.13,412.07,873.54,492,815.13,551.7,723.74,645.2,628.54,735,535.2,826.56c-22.34,21.92-42.9,20.85-64.87-.72C378.05,735.26,283.94,646.5,193.45,554.17c-56.85-58-68.76-128.58-35.43-203.78C192.7,272.15,256.76,237.57,339.38,233Z"></path>
+                         </svg>
                           </div>
                        </div>
                     </div>
@@ -185,9 +191,9 @@ function friendsload(){
                           <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[k][0] + `_c"></div>
                           <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_b">
                              <div class="bigHeartText" id="` + reversevalue[k][0] + `_t"></div>
-                             <div class="bigHeartBefore" id="` + reversevalue[k][0] + `_bb"></div>
-                             <div class="bigHeartMain" id="` + reversevalue[k][0] + `_bm"></div>
-                             <div class="bigHeartAfter" id="` + reversevalue[k][0] + `_ba"></div>
+                             <svg class="heartSVG" data-name="heartSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="` + reversevalue[k][0] + `_g">
+                             <path d="M339.38,233c49.85-1.33,93.69,15.82,130.28,47,25.5,21.75,42.17,18.39,67.87-.56C647,198.67,784.74,226.82,843.29,339.34,881.13,412.07,873.54,492,815.13,551.7,723.74,645.2,628.54,735,535.2,826.56c-22.34,21.92-42.9,20.85-64.87-.72C378.05,735.26,283.94,646.5,193.45,554.17c-56.85-58-68.76-128.58-35.43-203.78C192.7,272.15,256.76,237.57,339.38,233Z"></path>
+                         </svg>
                           </div>
                        </div>
                     </div>
@@ -216,9 +222,9 @@ function friendsload(){
                           <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[j][0] + `_c"></div>
                           <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[j][0] + `_b">
                              <div class="bigHeartText" id="` + reversevalue[j][0] + `_t"></div>
-                             <div class="bigHeartBefore" id="` + reversevalue[j][0] + `_bb"></div>
-                             <div class="bigHeartMain" id="` + reversevalue[j][0] + `_bm"></div>
-                             <div class="bigHeartAfter" id="` + reversevalue[j][0] + `_ba"></div>
+                             <svg class="heartSVG" data-name="heartSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="` + reversevalue[j][0] + `_g">
+                             <path d="M339.38,233c49.85-1.33,93.69,15.82,130.28,47,25.5,21.75,42.17,18.39,67.87-.56C647,198.67,784.74,226.82,843.29,339.34,881.13,412.07,873.54,492,815.13,551.7,723.74,645.2,628.54,735,535.2,826.56c-22.34,21.92-42.9,20.85-64.87-.72C378.05,735.26,283.94,646.5,193.45,554.17c-56.85-58-68.76-128.58-35.43-203.78C192.7,272.15,256.76,237.57,339.38,233Z"></path>
+                         </svg>
                           </div>
                        </div>
                     </div>
@@ -239,9 +245,9 @@ function friendsload(){
                           <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[k][0] + `_c"></div>
                           <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[k][0] + `_b">
                              <div class="bigHeartText" id="` + reversevalue[k][0] + `_t"></div>
-                             <div class="bigHeartBefore" id="` + reversevalue[k][0] + `_bb"></div>
-                             <div class="bigHeartMain" id="` + reversevalue[k][0] + `_bm"></div>
-                             <div class="bigHeartAfter" id="` + reversevalue[k][0] + `_ba"></div>
+                             <svg class="heartSVG" data-name="heartSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="` + reversevalue[k][0] + `_g">
+                             <path d="M339.38,233c49.85-1.33,93.69,15.82,130.28,47,25.5,21.75,42.17,18.39,67.87-.56C647,198.67,784.74,226.82,843.29,339.34,881.13,412.07,873.54,492,815.13,551.7,723.74,645.2,628.54,735,535.2,826.56c-22.34,21.92-42.9,20.85-64.87-.72C378.05,735.26,283.94,646.5,193.45,554.17c-56.85-58-68.76-128.58-35.43-203.78C192.7,272.15,256.76,237.57,339.38,233Z"></path>
+                         </svg>
                           </div>
                        </div>
                     </div>
@@ -267,9 +273,9 @@ function friendsload(){
                      <div class="crown" onclick="crown(this.id);" style="cursor: pointer; pointer-events: none; display: none;" id="` + reversevalue[last][0] + `_c"></div>
                      <div class="bigHeartCover" onclick="bigHeart(this.id);" style="cursor: pointer;" id="` + reversevalue[last][0] + `_b">
                         <div class="bigHeartText" id="` + reversevalue[last][0] + `_t"></div>
-                        <div class="bigHeartBefore" id="` + reversevalue[last][0] + `_bb"></div>
-                        <div class="bigHeartMain" id="` + reversevalue[last][0] + `_bm"></div>
-                        <div class="bigHeartAfter" id="` + reversevalue[last][0] + `_ba"></div>
+                        <svg class="heartSVG" data-name="heartSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="` + reversevalue[last][0] + `_g">
+                        <path d="M339.38,233c49.85-1.33,93.69,15.82,130.28,47,25.5,21.75,42.17,18.39,67.87-.56C647,198.67,784.74,226.82,843.29,339.34,881.13,412.07,873.54,492,815.13,551.7,723.74,645.2,628.54,735,535.2,826.56c-22.34,21.92-42.9,20.85-64.87-.72C378.05,735.26,283.94,646.5,193.45,554.17c-56.85-58-68.76-128.58-35.43-203.78C192.7,272.15,256.76,237.57,339.38,233Z"></path>
+                    </svg>
                      </div>
                   </div>
                </div>
@@ -281,18 +287,27 @@ function friendsload(){
         var flist = flist.replace(/display: none;/g, '');
         var flist = flist.replace(/display: inline-block;/g, '');
 
+        
+
         var cs = constantine.join('').replace(/[0-9]/g, '');
         var cs = cs.replace(/display: none;/g, '');
         var cs = cs.replace(/display: inline-block;/g, '');
 
+
         if (flist != cs) {
             document.getElementById('friendslist').innerHTML = constantine.join('');
+            console.log(flist)
+            console.log(cs)
         }
 
+        var heartcountArray = [];
+
         for (h = 0; h < friendsvalueArray.length; h++){
+            heartcountArray.push(friendsvalueArray[h][2])
             try {
                 if (document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML != String(friendsvalueArray[h][2])){
                     document.getElementById(friendsvalueArray[h][0] + '_t').innerHTML = String(friendsvalueArray[h][2]);
+                    
                 }
             }
             catch(err) {
@@ -326,6 +341,54 @@ function friendsload(){
             }
         }
 
+        for (color = 0; color < friendsvalueArray.length; color++){
+            var svgns = 'http://www.w3.org/2000/svg';
+            var gradient = document.createElementNS(svg, 'linearGradient');
+            var svg = document.createElementNS(svgns, 'svg');
+            
+            var persent = friendsvalueArray[color][2] / max * 100
+            if (persent == NaN){
+                var persent = 100;
+            }
+            var stops = [
+                {
+                    'color' : "#FF8174",
+                    'offset' : '0%',
+                    'opacity' : '1'
+                }, {
+                    'color' : "#FF8174",
+                    'offset' : persent + '%',
+                    'opacity' : '1'
+                }, {
+                    'color' : "#CCCCCC",
+                    'offset' : persent + '%',
+                    'opacity' : '1'
+                }, {
+                    'color' : "#CCCCCC",
+                    'offset' : '100%',
+                    'opacity' : '1'
+                }
+            ]
+
+            for (i = 0, length = stops.length; i < length; i++){
+                var stop = document.createElementNS(svg, 'stop')
+                stop.setAttribute('offset', stops[i].offset)
+                stop.setAttribute('stop-color', stops[i].color)
+                stop.setAttribute('stop-opacity', stops[i].opacity)
+
+                gradient.appendChild(stop)
+            }
+            
+            gradient.id = 'lg' + friendsvalueArray[color][0]
+            // gradient.setAttribute('x1', '0');
+            // gradient.setAttribute('y1', '1');
+            // gradient.setAttribute('x2', '0');
+            // gradient.setAttribute('y2', '0');
+
+            //document.getElementById(friendsvalueArray[color][0] + '_g').appendChild(gradient);
+            //document.getElementById(friendsvalueArray[color][0] + '_g').setAttribute('fill','url(/#lg' + friendsvalueArray[color][0] + ')')
+        }
+
         fload();
     })
 }
@@ -345,7 +408,7 @@ function getyes(bool) {
 	var month = String(month).padStart(2, '0');
 	var day = imyesdate.getDate();
 	var day = String(day).padStart(2, '0');
-	yesdate = year + "-" + month + "-" + day;
+	yesdate = year + "/" + month + "/" + day;
 
 	if (bool == true){
 		console.log("yesdate : " + yesdate);
