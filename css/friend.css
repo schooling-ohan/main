@@ -174,7 +174,7 @@ hr.nick_report {
 	width: 95px;
 	margin-right: 20px;
 	z-index: 1;
-	fill: #CCCCCC;
+	/*fill: #CCCCCC;*/
 }
 
 .bigHeartMain {
